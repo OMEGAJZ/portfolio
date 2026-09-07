@@ -1,0 +1,44 @@
+---
+import { site, sections } from '../config/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-line bg-surface">
+  <div
+    class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:px-8"
+  >
+    <div>
+      <p class="text-sm font-semibold text-ink">{site.name}</p>
+      <p class="mt-1 text-sm text-muted">{site.role} · {site.location}</p>
+    </div>
+
+    <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-2">
+      {
+        sections.map((section) => (
+          <a
+            href={`#${section.id}`}
+            class="text-sm text-body transition-colors hover:text-navy-700"
+          >
+            {section.label}
+          </a>
+        ))
+      }
+      <a
+        href="#contact"
+        class="text-sm text-body transition-colors hover:text-navy-700"
+      >
+        Contact
+      </a>
+    </nav>
+  </div>
+
+  <div class="border-t border-line">
+    <div class="mx-auto max-w-6xl px-6 py-6 lg:px-8">
+      <p class="text-xs text-muted">
+        © {year} {site.name}. Built with Astro. No cookies, no tracking of
+        personal data.
+      </p>
+    </div>
+  </div>
+</footer>

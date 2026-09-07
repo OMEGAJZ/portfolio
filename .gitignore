@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+*.log
+.env
+.env.production
+
+# Internal working documents — kept locally, deliberately not published.
+# The repository is public, so the project brief, the raw professional profile
+# and the full development notes stay out of it. The repository carries only a
+# short README; site content lives in src/content/ and src/data/.
+project-scope.md
+projekterfahrung.md
+development-notes.md

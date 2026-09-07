@@ -1,0 +1,54 @@
+---
+import Section from './Section.astro';
+
+const facts = [
+  { label: 'Focus', value: 'Data Engineering, ETL/ELT & BI' },
+  { label: 'Platforms', value: 'AWS · Snowflake · PostgreSQL' },
+  { label: 'Architecture', value: 'Data Vault 2.0 · Data Warehouse' },
+  { label: 'Working since', value: '2021' },
+];
+---
+
+<Section
+  id="about"
+  kicker="About"
+  title="A consultant who builds, not just advises"
+>
+  <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
+    <div class="space-y-5 text-lg leading-relaxed text-body">
+      <p>
+        I work as a Business Intelligence consultant with a focus on data
+        engineering, data analysis and reporting — developing and maintaining
+        data pipelines, processing large volumes of data, and preparing that
+        data so it can answer analytical and business questions.
+      </p>
+      <p>
+        In my current projects that means leading the migration of an
+        on-premises data platform into AWS, and moving a legacy SAP BODS
+        landscape onto Snowflake. In both, the work spans the whole path:
+        designing the data model, building the pipelines, setting up the CI/CD
+        and deployment processes, and supporting the platform once it is live.
+      </p>
+      <p>
+        What I bring beyond the implementation is the layer around it. I act as
+        the point of contact between business requirements, technical teams and
+        delivery — coordinating priorities, aligning stakeholders, and making
+        sure the solution that gets built is the one the business actually
+        needed.
+      </p>
+    </div>
+
+    <dl class="space-y-6 border-t border-line pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+      {
+        facts.map((fact) => (
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+              {fact.label}
+            </dt>
+            <dd class="mt-1.5 text-base font-semibold text-ink">{fact.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</Section>

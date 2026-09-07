@@ -1,0 +1,30 @@
+---
+import Section from './Section.astro';
+import { expertise } from '../data/expertise';
+---
+
+<Section
+  id="expertise"
+  kicker="Expertise"
+  title="Technologies I work with"
+  intro="The tools matter less than the outcome, but they are worth being concrete about. These are the technologies I use in day-to-day project work."
+>
+  <div class="grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      expertise.map((group) => (
+        <div>
+          <h3 class="border-b border-line pb-3 text-xs font-semibold uppercase tracking-[0.18em] text-navy-600">
+            {group.title}
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {group.items.map((item) => (
+              <li class="rounded-md bg-surface-alt px-3 py-1.5 text-sm font-medium text-ink ring-1 ring-inset ring-line">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</Section>

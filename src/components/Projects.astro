@@ -1,0 +1,89 @@
+---
+import Section from './Section.astro';
+import { getCollection, render } from 'astro:content';
+
+const entries = await getCollection('projects');
+const projects = entries.sort((a, b) => a.data.order - b.data.order);
+
+// Render each Markdown body once, up front, so the template stays flat.
+const rendered = await Promise.all(
+  projects.map(async (project) => ({
+    data: project.data,
+    Content: (await render(project)).Content,
+  })),
+);
+---
+
+<Section
+  id="projects"
+  kicker="Project Experience"
+  title="Selected projects"
+  intro="Client names are omitted for confidentiality. What follows is the context, my role and the technologies involved."
+  alt
+>
+  <div class="space-y-8">
+    {
+      rendered.map(({ data, Content }) => (
+        <article class="rounded-xl border border-line bg-surface p-7 sm:p-9">
+          <header class="border-b border-line pb-6">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-semibold uppercase tracking-[0.14em]">
+              <span class="rounded-md bg-navy-50 px-2.5 py-1 text-navy-700">
+                {data.industry}
+              </span>
+              <span class="text-muted">{data.period}</span>
+            </div>
+            <h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">
+              {data.title}
+            </h3>
+            <p class="mt-2 text-sm font-semibold text-navy-600">{data.role}</p>
+            <p class="mt-4 max-w-3xl text-base leading-relaxed text-body">
+              {data.summary}
+            </p>
+          </header>
+
+          <div class="grid gap-10 pt-6 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
+            <div>
+              <div class="space-y-4 text-base leading-relaxed text-body [&_p]:text-body">
+                <Content />
+              </div>
+
+              <h4 class="mt-8 text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                Responsibilities
+              </h4>
+              <ul class="mt-4 space-y-2.5">
+                {data.responsibilities.map((item) => (
+                  <li class="flex gap-3 text-sm leading-relaxed text-body">
+                    <svg
+                      class="mt-1.5 h-1.5 w-1.5 flex-none text-navy-500"
+                      viewBox="0 0 6 6"
+                      aria-hidden="true"
+                    >
+                      <circle cx="3" cy="3" r="3" fill="currentColor" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="border-t border-line pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+              <h4 class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                Tech stack
+              </h4>
+              <dl class="mt-4 space-y-3.5">
+                {data.stack.map((tech) => (
+                  <div>
+                    <dt class="text-sm font-semibold text-ink">{tech.name}</dt>
+                    {tech.note && (
+                      <dd class="mt-0.5 text-sm text-muted">{tech.note}</dd>
+                    )}
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</Section>
