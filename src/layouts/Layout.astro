@@ -9,16 +9,16 @@ interface Props {
 
 const { title, description = site.description } = Astro.props;
 
-// Canonical URL — Astro.url already carries the configured `base` path.
+// Canonical URL - Astro.url already carries the configured `base` path.
 const canonical = new URL(Astro.url.pathname, Astro.site).href.replace(/\/$/, '');
 
 const base = import.meta.env.BASE_URL;
 // BASE_URL is '/' at the root and '/repo/' for a project page; normalise joins.
 const asset = (path: string) => `${base.replace(/\/$/, '')}/${path}`;
 
-// Absolute URL — social platforms will not resolve a relative og:image.
+// Absolute URL - social platforms will not resolve a relative og:image.
 const ogImage = new URL(asset('og-image.png'), Astro.site).href;
-const ogImageAlt = `${site.name} — ${site.role}`;
+const ogImageAlt = `${site.name} - ${site.role}`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -55,7 +55,7 @@ const jsonLd = {
     <link rel="canonical" href={canonical} />
 
     <link rel="icon" type="image/svg+xml" href={asset('favicon.svg')} />
-    <meta name="theme-color" content="#1e3a5f" />
+    <meta name="theme-color" content="#0a0f1a" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Open Graph -->
@@ -102,7 +102,7 @@ const jsonLd = {
   <body class="bg-surface text-body antialiased">
     <a
       href="#main"
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-navy-700 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-surface"
     >
       Skip to content
     </a>

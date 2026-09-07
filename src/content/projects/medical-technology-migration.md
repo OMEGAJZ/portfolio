@@ -2,7 +2,7 @@
 title: "Legacy Platform Migration to Snowflake"
 period: "2026 – Present"
 industry: "Medical Technology"
-role: "Consultant · Data Engineering & Migration Lead"
+role: "Data Engineering & Migration · Consultant"
 summary: "Migrating a legacy SAP BODS platform to a cloud data warehouse on Snowflake, while modelling the persistent staging and Data Vault layers from the ground up."
 responsibilities:
   - "Migration of existing SAP BODS jobs to Matillion ETL"
@@ -35,7 +35,7 @@ order: 1
 
 A long-running SAP BODS installation had to be moved onto a modern, cloud-based
 platform. The focus of the project is the transfer and optimisation of the
-existing BODS jobs into Snowflake using Matillion ETL — not a one-to-one
+existing BODS jobs into Snowflake using Matillion ETL - not a one-to-one
 port, but a chance to clean up and improve the processes on the way across.
 
 Alongside the migration itself I am responsible for modelling and building the

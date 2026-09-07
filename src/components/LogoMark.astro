@@ -1,0 +1,33 @@
+---
+/**
+ * Logo mark: two upstream sources converging into one downstream node -
+ * a data pipeline. Chosen over a database cylinder because the work is
+ * integration and orchestration, not storage.
+ *
+ * Inherits colour from the parent via currentColor; edges are drawn at
+ * reduced opacity so the nodes stay the dominant shape at small sizes.
+ */
+interface Props {
+  class?: string;
+}
+
+const { class: className = 'h-4 w-4' } = Astro.props;
+---
+
+<svg
+  class={className}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  aria-hidden="true"
+>
+  <path
+    d="M7.8 6.7 16.2 10.8M7.8 17.3 16.2 13.2"
+    stroke-width="1.7"
+    stroke-linecap="round"
+    opacity="0.55"
+  />
+  <circle cx="5.5" cy="5.5" r="2.6" fill="currentColor" stroke="none" />
+  <circle cx="5.5" cy="18.5" r="2.6" fill="currentColor" stroke="none" />
+  <circle cx="18.5" cy="12" r="2.6" fill="currentColor" stroke="none" />
+</svg>

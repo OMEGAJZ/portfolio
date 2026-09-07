@@ -1,17 +1,10 @@
 ---
 import { site, sections } from '../config/site';
-
-// Derived from the name so the logo mark can never drift out of sync.
-const initials = site.name
-  .split(/\s+/)
-  .map((word) => word[0])
-  .join('')
-  .slice(0, 2)
-  .toUpperCase();
+import LogoMark from './LogoMark.astro';
 ---
 
 <header
-  class="sticky top-0 z-40 border-b border-line bg-surface/85 backdrop-blur-sm"
+  class="sticky top-0 z-40 border-b border-line bg-surface/80 backdrop-blur-md"
 >
   <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
     <a
@@ -19,9 +12,10 @@ const initials = site.name
       class="flex items-center gap-2.5 text-sm font-semibold tracking-tight text-ink"
     >
       <span
-        class="grid h-8 w-8 place-items-center rounded-md bg-navy-700 text-xs font-bold tracking-tight text-white"
-        aria-hidden="true">{initials}</span
+        class="grid h-8 w-8 place-items-center rounded-md border border-line-strong/60 bg-panel text-accent"
       >
+        <LogoMark class="h-[18px] w-[18px]" />
+      </span>
       <span>{site.name}</span>
     </a>
 
@@ -30,7 +24,7 @@ const initials = site.name
         sections.map((section) => (
           <a
             href={`#${section.id}`}
-            class="text-sm font-medium text-body transition-colors hover:text-navy-700"
+            class="text-sm font-medium text-body transition-colors hover:text-ink"
           >
             {section.label}
           </a>
@@ -41,16 +35,30 @@ const initials = site.name
     <div class="flex items-center gap-3">
       <a
         href="#contact"
-        class="rounded-md bg-navy-700 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-navy-800"
+        class="group inline-flex items-center gap-1.5 rounded-md bg-ink px-4 py-2 text-sm font-semibold text-surface transition-colors hover:bg-white"
       >
         Get in touch
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.9"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          class="transition-transform duration-200 group-hover:translate-x-0.5"
+        >
+          <path d="M3 8h10M9 4l4 4-4 4" />
+        </svg>
       </a>
 
       <!-- Mobile menu: a native <details> disclosure, so navigation works with
            zero client-side JavaScript and stays keyboard accessible. -->
       <details class="relative md:hidden">
         <summary
-          class="grid h-9 w-9 cursor-pointer list-none place-items-center rounded-md border border-line text-ink [&::-webkit-details-marker]:hidden"
+          class="grid h-9 w-9 cursor-pointer list-none place-items-center rounded-md border border-line-strong text-ink [&::-webkit-details-marker]:hidden"
           aria-label="Open navigation menu"
         >
           <svg
@@ -68,13 +76,13 @@ const initials = site.name
         </summary>
         <nav
           aria-label="Mobile"
-          class="absolute right-0 mt-2 w-52 rounded-lg border border-line bg-surface p-2 shadow-lg"
+          class="absolute right-0 mt-2 w-52 rounded-lg border border-line bg-panel p-2 shadow-xl shadow-black/40"
         >
           {
             sections.map((section) => (
               <a
                 href={`#${section.id}`}
-                class="block rounded-md px-3 py-2 text-sm font-medium text-body hover:bg-surface-alt hover:text-navy-700"
+                class="block rounded-md px-3 py-2 text-sm font-medium text-body hover:bg-surface-alt hover:text-ink"
               >
                 {section.label}
               </a>

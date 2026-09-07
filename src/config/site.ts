@@ -2,7 +2,7 @@
  * Single source of truth for identity, contact details and site metadata.
  *
  * Everything a human needs to personalise before launch lives in this file.
- * Values marked CHANGE-ME are placeholders — nothing here was invented from
+ * Values marked CHANGE-ME are placeholders - nothing here was invented from
  * the profile, so fill them in before deploying.
  */
 
@@ -10,13 +10,13 @@ export const site = {
   /** Full name as it appears publicly. */
   name: 'Justin Zacharias',
 
-  /** Professional positioning — used in the hero and the <title>. */
+  /** Professional positioning - used in the hero and the <title>. */
   role: 'Business Intelligence & Data Engineering Consultant',
 
   /**
    * CHANGE-ME: the contact address shown on the site. This is currently the
    * ONLY contact route on the page (LinkedIn is disabled below), and the value
-   * is rendered verbatim on the contact button — so an unset placeholder is
+   * is rendered verbatim on the contact button - so an unset placeholder is
    * visible to every visitor. Set a real address before publishing.
    */
   email: 'CHANGE-ME@example.com',
@@ -32,10 +32,10 @@ export const site = {
 
   /** Meta description (~155 chars) used for search results and link previews. */
   description:
-    'Business Intelligence and Data Engineering consultant. I help companies build, modernise and migrate data platforms — ETL/ELT pipelines, AWS and Snowflake cloud platforms, Data Vault 2.0 warehousing and BI reporting.',
+    'Business Intelligence and Data Engineering consultant. I help companies build, modernise and migrate data platforms - ETL/ELT pipelines, AWS and Snowflake cloud platforms, Data Vault 2.0 warehousing and BI reporting.',
 
   /**
-   * Plausible Analytics — privacy-friendly, cookieless, no personal data.
+   * Plausible Analytics - privacy-friendly, cookieless, no personal data.
    * CHANGE-ME: set to the domain registered in Plausible (e.g. 'example.com').
    * Leave as null to ship without any analytics script at all.
    */

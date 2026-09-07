@@ -22,7 +22,7 @@ export const expertise: ExpertiseGroup[] = [
   },
   {
     title: 'Data Architecture',
-    items: ['Data Vault 2.0', 'Data Warehouse', 'Persistent Staging Area'],
+    items: ['Data Mart', 'Data Vault 2.0', 'Data Warehouse', 'Persistent Staging Area'],
   },
   {
     title: 'Business Intelligence',

@@ -1,6 +1,6 @@
 # Portfolio & Consulting Website
 
-Personal portfolio and consulting website of Justin Zacharias — Business
+Personal portfolio and consulting website of Justin Zacharias - Business
 Intelligence & Data Engineering Consultant.
 
 **Live:** https://omegajz.github.io/portfolio

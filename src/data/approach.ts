@@ -16,7 +16,7 @@ export const approach: ApproachStep[] = [
   {
     title: 'Translate it into a solution',
     description:
-      'Turn those requirements into a concrete technical design — data model, pipeline, orchestration and the deployment path to production.',
+      'Turn those requirements into a concrete technical design - data model, pipeline, orchestration and the deployment path to production.',
   },
   {
     title: 'Build and integrate',

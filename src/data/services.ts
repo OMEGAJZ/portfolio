@@ -13,7 +13,7 @@ export const services: Service[] = [
     title: 'Data Engineering',
     problem: 'Pipelines break silently and nobody trusts the numbers.',
     description:
-      'Design and development of reliable data pipelines and processing workflows — including the orchestration and monitoring that makes failures visible before your stakeholders find them.',
+      'Design and development of reliable data pipelines and processing workflows - including the orchestration and monitoring that makes failures visible before your stakeholders find them.',
   },
   {
     title: 'Cloud Data Platforms',
@@ -25,7 +25,7 @@ export const services: Service[] = [
     title: 'ETL / ELT Development',
     problem: 'Data integrations are slow, brittle or poorly understood.',
     description:
-      'Development, modernisation and optimisation of ETL/ELT processes and data integrations — from APIs and transactional systems through to the analytical layer.',
+      'Development, modernisation and optimisation of ETL/ELT processes and data integrations - from APIs and transactional systems through to the analytical layer.',
   },
   {
     title: 'Data Warehouse & Data Vault',
@@ -43,12 +43,12 @@ export const services: Service[] = [
     title: 'Legacy System Migration',
     problem: 'A legacy ETL platform is becoming a risk to the business.',
     description:
-      'Migration and modernisation of legacy ETL platforms — analysing what the existing jobs really do, then rebuilding them on a modern stack instead of copying the old structure across.',
+      'Migration and modernisation of legacy ETL platforms - analysing what the existing jobs really do, then rebuilding them on a modern stack instead of copying the old structure across.',
   },
   {
     title: 'Technical Consulting',
     problem: 'Business requirements and technical delivery keep missing each other.',
     description:
-      'Technical analysis, solution design and implementation guidance — plus the translation between technical teams and business stakeholders that keeps a project moving.',
+      'Technical analysis, solution design and implementation guidance - plus the translation between technical teams and business stakeholders that keeps a project moving.',
   },
 ];

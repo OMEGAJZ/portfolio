@@ -21,7 +21,7 @@ order: 3
 
 When a vehicle broke down, a battery test tool recorded a range of technical and
 diagnostic readings. Across a large dataset from the United Kingdom, my work was
-to process that raw output and make it answer questions — validating the
+to process that raw output and make it answer questions - validating the
 collected vehicle and battery data, finding the patterns and anomalies inside
 it, and building the reports on top.
 

@@ -9,7 +9,7 @@ const projects = defineCollection({
     title: z.string(),
     /** Time frame exactly as documented in projekterfahrung.md. */
     period: z.string(),
-    /** Client industry — never the client name. */
+    /** Client industry - never the client name. */
     industry: z.string(),
     /** My role on the project. */
     role: z.string(),
@@ -26,7 +26,7 @@ const projects = defineCollection({
         }),
       )
       .min(1),
-    /** Display order — most recent first. */
+    /** Display order - most recent first. */
     order: z.number(),
   }),
 });

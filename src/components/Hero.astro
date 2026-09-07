@@ -6,16 +6,22 @@ const highlights = ['AWS', 'Snowflake', 'dbt', 'Dagster', 'Data Vault 2.0', 'Mat
 ---
 
 <section id="top" class="relative overflow-hidden bg-surface">
-  <!-- Restrained background treatment: a faint navy wash, no gradients-as-decoration. -->
+  <!-- Restrained background: one faint accent wash high on the right, plus a
+       hairline grid that only reads as texture. No decorative gradients. -->
   <div
-    class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60rem_32rem_at_75%_-10%,var(--color-navy-50),transparent)]"
+    class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(48rem_26rem_at_78%_-12%,rgba(127,166,217,0.10),transparent_70%)]"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-line-strong/50 to-transparent"
     aria-hidden="true"
   >
   </div>
 
   <div class="mx-auto max-w-6xl px-6 pb-20 pt-20 sm:pb-24 sm:pt-28 lg:px-8">
     <div class="max-w-3xl">
-      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-navy-600">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
         {site.role}
       </p>
 
@@ -27,14 +33,14 @@ const highlights = ['AWS', 'Snowflake', 'dbt', 'Dagster', 'Data Vault 2.0', 'Mat
 
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-body sm:text-xl">
         From data integration and ETL pipelines to cloud platforms, data
-        warehousing and BI reporting — I work across the full path from a
+        warehousing and BI reporting - I work across the full path from a
         business requirement to a running, supported data platform.
       </p>
 
       <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
         <a
           href="#contact"
-          class="inline-flex items-center justify-center gap-2 rounded-md bg-navy-700 px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-navy-800"
+          class="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-6 py-3 text-base font-semibold text-surface transition-colors hover:bg-white"
         >
           Let's talk
           <svg
@@ -53,7 +59,7 @@ const highlights = ['AWS', 'Snowflake', 'dbt', 'Dagster', 'Data Vault 2.0', 'Mat
         </a>
         <a
           href="#projects"
-          class="inline-flex items-center justify-center rounded-md border border-line bg-surface px-6 py-3 text-base font-semibold text-ink transition-colors hover:border-navy-200 hover:bg-navy-50"
+          class="inline-flex items-center justify-center rounded-md border border-line-strong px-6 py-3 text-base font-semibold text-ink transition-colors hover:bg-panel"
         >
           View project experience
         </a>

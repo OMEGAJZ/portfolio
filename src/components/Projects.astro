@@ -24,10 +24,10 @@ const rendered = await Promise.all(
   <div class="space-y-8">
     {
       rendered.map(({ data, Content }) => (
-        <article class="rounded-xl border border-line bg-surface p-7 sm:p-9">
+        <article class="rounded-xl border border-line bg-panel p-7 sm:p-9">
           <header class="border-b border-line pb-6">
             <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-semibold uppercase tracking-[0.14em]">
-              <span class="rounded-md bg-navy-50 px-2.5 py-1 text-navy-700">
+              <span class="rounded-md bg-accent-soft px-2.5 py-1 text-accent">
                 {data.industry}
               </span>
               <span class="text-muted">{data.period}</span>
@@ -35,7 +35,7 @@ const rendered = await Promise.all(
             <h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">
               {data.title}
             </h3>
-            <p class="mt-2 text-sm font-semibold text-navy-600">{data.role}</p>
+            <p class="mt-2 text-sm font-semibold text-accent">{data.role}</p>
             <p class="mt-4 max-w-3xl text-base leading-relaxed text-body">
               {data.summary}
             </p>
@@ -54,7 +54,7 @@ const rendered = await Promise.all(
                 {data.responsibilities.map((item) => (
                   <li class="flex gap-3 text-sm leading-relaxed text-body">
                     <svg
-                      class="mt-1.5 h-1.5 w-1.5 flex-none text-navy-500"
+                      class="mt-1.5 h-1.5 w-1.5 flex-none text-accent"
                       viewBox="0 0 6 6"
                       aria-hidden="true"
                     >

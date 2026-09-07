@@ -44,7 +44,7 @@ order: 2
 A complete move of an existing on-premises data platform into the AWS cloud. In
 a leading consulting and development role I am responsible for the design,
 development and ongoing evolution of the central components of the data
-engineering and BI landscape — from ingestion and orchestration through to the
+engineering and BI landscape - from ingestion and orchestration through to the
 reports the business actually uses.
 
 Just as important as the engineering is the alignment around it. As the main
