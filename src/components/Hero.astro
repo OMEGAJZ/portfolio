@@ -1,8 +1,5 @@
 ---
 import { site } from '../config/site';
-
-/** Shown under the hero as a quick credibility signal, not a full tech list. */
-const highlights = ['AWS', 'Snowflake', 'dbt', 'Dagster', 'Data Vault 2.0', 'Matillion'];
 ---
 
 <section id="top" class="relative overflow-hidden bg-surface">
@@ -64,19 +61,6 @@ const highlights = ['AWS', 'Snowflake', 'dbt', 'Dagster', 'Data Vault 2.0', 'Mat
           View project experience
         </a>
       </div>
-    </div>
-
-    <div class="mt-16 border-t border-line pt-8">
-      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-        Working with
-      </p>
-      <ul class="mt-4 flex flex-wrap gap-x-8 gap-y-3">
-        {
-          highlights.map((item) => (
-            <li class="text-sm font-semibold text-body">{item}</li>
-          ))
-        }
-      </ul>
     </div>
   </div>
 </section>

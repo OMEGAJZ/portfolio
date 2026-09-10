@@ -3,10 +3,15 @@ import Section from './Section.astro';
 
 const facts = [
   { label: 'Focus', value: 'Data Engineering, ETL/ELT & BI' },
-  { label: 'Platforms', value: 'AWS · Snowflake · PostgreSQL' },
-  { label: 'Architecture', value: 'Data Vault 2.0 · Data Warehouse' },
   { label: 'Working since', value: '2021' },
 ];
+
+/**
+ * The technologies that carry most of the day-to-day work - a credibility
+ * signal, not a full inventory. The complete, grouped list lives in the
+ * Expertise section, so this stays deliberately short.
+ */
+const workingWith = ['AWS', 'Snowflake', 'dbt', 'Dagster', 'Data Vault 2.0', 'Matillion'];
 ---
 
 <Section
@@ -31,17 +36,34 @@ const facts = [
       </p>
     </div>
 
-    <dl class="space-y-6 border-t border-line pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
-      {
-        facts.map((fact) => (
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-              {fact.label}
-            </dt>
-            <dd class="mt-1.5 text-base font-semibold text-ink">{fact.value}</dd>
-          </div>
-        ))
-      }
-    </dl>
+    <div class="border-t border-line pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+      <dl class="space-y-6">
+        {
+          facts.map((fact) => (
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                {fact.label}
+              </dt>
+              <dd class="mt-1.5 text-base font-semibold text-ink">{fact.value}</dd>
+            </div>
+          ))
+        }
+
+        <div>
+          <dt class="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+            Working with
+          </dt>
+          <dd class="mt-2.5">
+            <ul class="flex flex-wrap gap-x-5 gap-y-2">
+              {
+                workingWith.map((item) => (
+                  <li class="text-sm font-semibold text-ink">{item}</li>
+                ))
+              }
+            </ul>
+          </dd>
+        </div>
+      </dl>
+    </div>
   </div>
 </Section>
